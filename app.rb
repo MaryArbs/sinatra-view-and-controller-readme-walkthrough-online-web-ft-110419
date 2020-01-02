@@ -5,9 +5,9 @@ class App < Sinatra::Base
     erb :reverse
   end
 
-  <% @friends.each do |friend| %>
-    <h2><%= friend %></h2>
-<% end %>
+  post '/reverse' do
+    erb :reversed
+  end
   post '/reverse' do
   original_string = params["string"]
   @reversed_string = original_string.reverse
